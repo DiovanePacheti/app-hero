@@ -3,6 +3,9 @@
   npm install express*/
 const express = require('express');
 
+/** instanciando o arquivo routes na index*/
+const routes = require('./routes');
+
 const app = express();//atribuindo as funcões do express para a constante app
 
 app.use(express.json());
@@ -32,18 +35,9 @@ app.use(express.json());
   * vamos utilizar knex.js como query builder
   * npm install knex
   * npm install sqlite3
-/*a constante app com o method GET recebe por parametro primeiro A rota no caso 
- *a rota esta no diretorio raiz '/' depois no segundo parametro sera passado 
-  uma função */
-app.post('/users',(request, response) =>{
+*/
 
-	const corpo = request.body;
-	
-	console.log(corpo);
-	return response.json({
-		nome:'diovane',
-		idade:34,
-	});
-});
+//utilizando as rotas 
+app.use(routes);
 
 app.listen(3333);//a constante sera ouvida na porta 3333 
