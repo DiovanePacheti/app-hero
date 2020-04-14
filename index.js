@@ -4,11 +4,28 @@
 const express = require('express');
 
 const app = express();//atribuindo as funcões do express para a constante app
+/** 
+ * Rota / Recurso
+ */
 
+ /** 
+  * Metodos HTTP:
+  * GET: Buscar uma informação do back-end
+  * POST: Criar uma informação no back-end
+  * PUt: Alterar uma informação no back-end
+  * DELETE: Deleta uma informação do back-end
+  */
+
+  /**
+  * Tipos de Parâmetros:
+  * 
+  * Query Params: Parâmetros nomeados enviados na rota apos "?" (Filtros, paginação) exemplo(GET http://localhost:3333/user?name=Diovane)
+  * Route Params: 
+  */
 /*a constante app com o method GET recebe por parametro primeiro A rota no caso 
  *a rota esta no diretorio raiz '/' depois no segundo parametro sera passado 
   uma função */
-app.get('/',(request, response) =>{
+app.post('/users',(request, response) =>{
 	return response.json({
 		nome:'diovane',
 		idade:34,
