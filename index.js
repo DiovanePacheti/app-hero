@@ -25,6 +25,13 @@ app.use(express.json());
   * Query Params: Parâmetros nomeados enviados na rota apos "?" (Filtros, paginação) exemplo(GET http://localhost:3333/user?name=Diovane)
   * Route Params: Parâmetros utilizados para identificar recursos exemplo (app.get('/users/:id', (request, response) =>{}))
   */
+
+  /**
+  * SQLite3 
+  * Query Builder: usar codigo javascript exemplo (table('users').select('*').where())
+  * vamos utilizar knex.js como query builder
+  * npm install knex
+  * npm install sqlite3
 /*a constante app com o method GET recebe por parametro primeiro A rota no caso 
  *a rota esta no diretorio raiz '/' depois no segundo parametro sera passado 
   uma função */
