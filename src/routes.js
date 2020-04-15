@@ -16,4 +16,11 @@ routes.post('/users',(request, response) =>{
 	});
 });
 
+routes.get('/users', (request, response) =>{
+	const nome = request.query;
+	console.log(nome);
+
+	(nome !== "diovane")? console.log(`Ola {{nome}}`):console.log("erro !");
+});
+
 module.exports = routes;
