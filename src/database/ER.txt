@@ -10,3 +10,9 @@ Funcionaliddes
   * Deletar casos
   * Listar casos especificos de uma ONG
   * Listar todos os casos
+  * Entrar em contato com a ONG
+
+  criando o banco dentro dos diretorio migrate
+
+
+
